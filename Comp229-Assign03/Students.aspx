@@ -13,6 +13,12 @@
                             DataFormatString="{0:MMM dd, yyyy}"/>
                     </Columns>
                 </asp:GridView>
+                <asp:GridView ID="StudentCourseView" runat="server">
+                    <Columns>
+                        <asp:BoundField DataField="Title" HeaderText="Course Title" Visible="false" />
+
+                    </Columns>
+                </asp:GridView>
             </div>
         </div>
     </div>

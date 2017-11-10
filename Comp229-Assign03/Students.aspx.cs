@@ -21,6 +21,7 @@ namespace Comp229_Assign03
             {
                 // Get the Student Data
                 this.GetStudents();
+                this.GetCourse();
             }
         }
         /// <summary>
@@ -37,6 +38,20 @@ namespace Comp229_Assign03
                 // bind the result to the Student GridView
                 StudentGridView.DataSource = Students.ToList();
                 StudentGridView.DataBind();
+            }
+        }
+        private void GetCourse()
+        {
+            // Connect  to Entity FrameWork
+            using (ControlsoContext db = new ControlsoContext())
+            {
+                //Query the Students Table using EF and LINQ
+                var Courses = (from allCourse in db.Courses
+                                select new { allCourse.Title });
+                // bind the result to the Student GridView
+                StudentCourseView.DataSource= Courses.ToList();
+
+                StudentCourseView.DataBind();
             }
         }
     }
