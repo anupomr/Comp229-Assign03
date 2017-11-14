@@ -20,39 +20,39 @@ namespace Comp229_Assign03
             if (!IsPostBack)
             {
                 // Get the Student Data
-                this.GetStudents();
-                this.GetCourse();
+                this.GetStudentsDetails();
+                
             }
         }
         /// <summary>
         /// This method gets the Students data from the DB
         /// </summary>
-        private void GetStudents()
+        private void GetStudentsDetails()
         {
+            int StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
             // Connect  to Entity FrameWork
             using (ControlsoContext db = new ControlsoContext())
             {
                 //Query the Students Table using EF and LINQ
                 var Students = (from allStudents in db.Students
+                                where allStudents.StudentID == StudentID
                                 select allStudents);
                 // bind the result to the Student GridView
                 StudentGridView.DataSource = Students.ToList();
                 StudentGridView.DataBind();
-            }
-        }
-        private void GetCourse()
-        {
-            // Connect  to Entity FrameWork
-            using (ControlsoContext db = new ControlsoContext())
-            {
-                //Query the Students Table using EF and LINQ
-                var Courses = (from allCourse in db.Courses
-                                select new { allCourse.Title });
-                // bind the result to the Student GridView
-                StudentCourseView.DataSource= Courses.ToList();
+
+                //Query the Course Table using EF and LINQ
+                var CoursesDetails = (from allCourse in db.Courses
+                                      join enrolment in db.Enrollments
+                                      on allCourse.CourseID equals enrolment.CourseID
+                                      where enrolment.StudentID == StudentID
+                                      select new { CourseID= allCourse.CourseID, Title=allCourse.Title, Grade=enrolment.Grade, Credit=allCourse.Credits });
+                // bind the result to the Course GridView
+                StudentCourseView.DataSource = CoursesDetails.ToList();
 
                 StudentCourseView.DataBind();
             }
         }
+        
     }
 }

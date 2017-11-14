@@ -37,6 +37,7 @@ namespace Comp229_Assign03
                 // map the student properties to the form control
                 if (updateStudent != null)
                 {
+                    
                     LastNameTextBox.Text = updateStudent.LastName;
                     FirstNameTextbox.Text = updateStudent.FirstMidName;
                     EnrollmentDateTextbox.Text = updateStudent.EnrollmentDate.ToString("yyyy-MM-dd");

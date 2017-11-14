@@ -13,12 +13,18 @@
                             DataFormatString="{0:MMM dd, yyyy}"/>
                     </Columns>
                 </asp:GridView>
-                <asp:GridView ID="StudentCourseView" runat="server">
+                <asp:GridView ID="StudentCourseView" runat="server" AutoGenerateColumns="false"
+                    cssClass="table table-bordered table-striped table-hover">
                     <Columns>
-                        <asp:BoundField DataField="Title" HeaderText="Course Title" Visible="false" />
+                        <asp:HyperLinkField DataTextField="Title" HeaderText=" Course Title" Visible="true" 
+                            DataNavigateUrlFields="CourseID" DataNavigateUrlFormatString="Courses.aspx?CourseID={0}" />
+                            
+                        <asp:BoundField DataField="Credit" HeaderText="Credits" Visible="true" />
+                        <asp:BoundField DataField="Grade" HeaderText="Grade" Visible="true" />
 
                     </Columns>
                 </asp:GridView>
+                 <a class="btn btn-primary btn-sm" href="Default.aspx">Back to Home</a>
             </div>
         </div>
     </div>
