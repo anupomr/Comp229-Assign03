@@ -6,7 +6,10 @@
                 <asp:GridView ID="StudentGridView" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover">
                     <Columns>
-                        <asp:BoundField DataField="StudentID" HeaderText="Student Id" Visible="true" />
+                        <asp:HyperLinkField DataTextField="StudentID" HeaderText="Student Id" Visible="true" 
+                            DataNavigateUrlFields="StudentID" DataNavigateUrlFormatString="Update.aspx?StudentID={0}" />
+
+                        
                         <asp:BoundField DataField="LastName" HeaderText="Last Name" Visible="true" />
                         <asp:BoundField DataField="FirstMidName" HeaderText="First Name" Visible="true" />
                         <asp:BoundField DataField="EnrollmentDate" HeaderText="Enrollment Date" Visible="true" 

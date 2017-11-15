@@ -18,10 +18,15 @@
                         <asp:BoundField DataField="EnrollmentDate" HeaderText="Enrollment Date" Visible="false" 
                             DataFormatString="{0:MMM dd, yyyy}"/>
 
-                         <asp:HyperLinkField HeaderText="Details" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Details"
+                         <asp:HyperLinkField HeaderText="Courses" Text="<i class='fa fa-user-o fa-lg'></i> Details "
                             NavigateUrl="~/Students.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm"
                             runat="server" DataNavigateUrlFields="StudentID"
                             DataNavigateUrlFormatString="Students.aspx?StudentID={0}" />
+                         
+                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i> Update"
+                            NavigateUrl="~/Update.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm"
+                            runat="server" DataNavigateUrlFields="StudentID"
+                            DataNavigateUrlFormatString="Update.aspx?StudentID={0}" />
                     </Columns>
                 </asp:GridView>
                 

@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Comp229_Assign03
-{
-
-
-    public partial class Site
-    {
-
+namespace Comp229_Assign03 {
+    
+    
+    public partial class Site {
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Comp229_Assign03
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// home control.
         /// </summary>
@@ -31,16 +29,7 @@ namespace Comp229_Assign03
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl home;
-
-        /// <summary>
-        /// Courses control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Courses;
-
+        
         /// <summary>
         /// Students control.
         /// </summary>
@@ -49,16 +38,16 @@ namespace Comp229_Assign03
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Students;
-
+        
         /// <summary>
-        /// Departments control.
+        /// Courses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Departments;
-
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Courses;
+        
         /// <summary>
         /// Enrollments control.
         /// </summary>
@@ -67,7 +56,16 @@ namespace Comp229_Assign03
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Enrollments;
-
+        
+        /// <summary>
+        /// Update control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Update;
+        
         /// <summary>
         /// about control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace Comp229_Assign03
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl about;
-
+        
         /// <summary>
         /// contact control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace Comp229_Assign03
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl contact;
-
+        
         /// <summary>
         /// MainContent control.
         /// </summary>

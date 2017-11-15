@@ -29,8 +29,8 @@ namespace Comp229_Assign03
                 case "Courses":
                     Courses.Attributes.Add("class", "active");
                     break;
-                case "Departments":
-                    Departments.Attributes.Add("class", "active");
+                case "Update":
+                    Update.Attributes.Add("class", "active");
                     break;
                 case "Enrollments":
                     Enrollments.Attributes.Add("class", "active");

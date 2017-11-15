@@ -77,7 +77,6 @@
   <ItemGroup>
     <Content Include="Addstudent.aspx" />
     <Content Include="Courses.aspx" />
-    <Content Include="Departments.aspx" />
     <Content Include="Enrollments.aspx" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.2.4.min.map" />
@@ -122,6 +121,7 @@
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Students.aspx" />
+    <Content Include="Update.aspx" />
     <Content Include="Web.config" />
     <Content Include="Site.Master" />
   </ItemGroup>
@@ -161,13 +161,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments.aspx.cs">
-      <DependentUpon>Departments.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Departments.aspx.designer.cs">
-      <DependentUpon>Departments.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Enrollments.aspx.cs">
       <DependentUpon>Enrollments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +190,13 @@
     </Compile>
     <Compile Include="Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
