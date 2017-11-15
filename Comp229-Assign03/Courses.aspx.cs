@@ -19,7 +19,29 @@ namespace Comp229_Assign03
 
         protected void CourseDetails_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            // Store Which row need to be deleted
+            int selectedRow = e.RowIndex;
 
+            // get the seleceted Enrollment Id
+            int EnrollmentID = Convert.ToInt32(CourseDetails.DataKeys[selectedRow].Values["EnrollmentID"]);
+
+            using(ControlsoContext db=new ControlsoContext())
+            {
+                var deleteStudent = (from delStudent in db.Enrollments
+                                     where delStudent.EnrollmentID == EnrollmentID
+                                     select delStudent);
+                // Remove Student from Enrolmented course
+                foreach (var item in deleteStudent)
+                {
+                    db.Enrollments.Remove(item);
+                }
+
+                db.SaveChanges();
+
+                // Refresh the Grid
+                this.GetStudents();
+
+            }
         }
         private void GetStudents()
         {
