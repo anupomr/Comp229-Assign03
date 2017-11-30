@@ -12,13 +12,16 @@
                 <asp:GridView ID="StudentGridView" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover" DataKeyNames="StudentID">
                     <Columns>
+                     
                         <asp:BoundField DataField="StudentID" HeaderText="Student Id" Visible="false" />
-                        <asp:BoundField DataField="LastName" HeaderText="Last Name" Visible="true" />
+                        <asp:HyperLinkField DataTextField="LastName" HeaderText="Last Name" Visible="true" 
+                             DataNavigateUrlFields="StudentID" DataNavigateUrlFormatString="Students.aspx?StudentID={0}" />
+                        
                         <asp:BoundField DataField="FirstMidName" HeaderText="First Name" Visible="true" />
                         <asp:BoundField DataField="EnrollmentDate" HeaderText="Enrollment Date" Visible="false" 
                             DataFormatString="{0:MMM dd, yyyy}"/>
 
-                         <asp:HyperLinkField HeaderText="Courses" Text="<i class='fa fa-user-o fa-lg'></i> Details "
+                         <asp:HyperLinkField HeaderText="Courses" Text="<i class='fa fa-id-card-o fa-lg' aria-hidden='true'></i> Details "
                             NavigateUrl="~/Students.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm"
                             runat="server" DataNavigateUrlFields="StudentID"
                             DataNavigateUrlFormatString="Students.aspx?StudentID={0}" />

@@ -22,24 +22,31 @@ namespace Comp229_Assign03
             {
                 case "Home":
                     home.Attributes.Add("class", "active");
+                    Page.Title = string.Format("Time-Tech College :: Home :: {0:d}", DateTime.Now);
                     break;
                 case "Students":
                     Students.Attributes.Add("class", "active");
+                    Page.Title = string.Format("Time-Tech College :: Students :: {0:d}", DateTime.Now);
                     break;
                 case "Courses":
                     Courses.Attributes.Add("class", "active");
+                    Page.Title = string.Format("Time-Tech College :: Courses :: {0:d}", DateTime.Now);
                     break;
                 case "Update":
                     Update.Attributes.Add("class", "active");
+                    Page.Title = string.Format("Time-Tech College :: Update :: {0:d}", DateTime.Now);
                     break;
                 case "Enrollments":
                     Enrollments.Attributes.Add("class", "active");
+                    Page.Title = string.Format("Time-Tech College :: Enrollments :: {0:d}", DateTime.Now);
                     break;
                 case "About":
                     about.Attributes.Add("class", "active");
+                    Page.Title = string.Format("Time-Tech College :: About :: {0:d}", DateTime.Now);
                     break;
                 case "Contact":
                     contact.Attributes.Add("class", "active");
+                    Page.Title = string.Format("Time-Tech College :: Contact :: {0:d}", DateTime.Now);
                     break;
             }
         }

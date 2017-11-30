@@ -1,5 +1,15 @@
-﻿/* custom css goes here */
-body { 
-    padding-bottom: 70px; 
-
+﻿
+/*Name : Anupom Roy 
+    Student ID : 300853516 
+    Date : September 21, 2017 
+    Centennial College*/
+#banner {
+    padding-top:0px;
+    padding-left:300px;
+}
+body {
+    padding-bottom: 70px;
+    /*
+        background-color: #B4B6B7;
+    */
 }
