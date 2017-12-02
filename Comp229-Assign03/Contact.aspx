@@ -4,7 +4,7 @@
     <div class="conatainer">
         <div class="row">
             <div class="col-md-offset-4 col-md-6">
-                <h1>Contact Me</h1>
+                <h1>Contact us</h1>
 
                 <div class="form-group">
                     <label for="FirstNameTextBox">First Name</label>
